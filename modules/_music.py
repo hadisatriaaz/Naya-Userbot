@@ -352,7 +352,7 @@ class YouTubeSearch:
                         res["duration"] != 0
                         and res["views"] != 0
                         and sum(
-                            x * 60**i
+                            int(x) * 60**i
                             for i, x in enumerate(
                                 reversed(str(res["duration"]).split(":"))
                             )
